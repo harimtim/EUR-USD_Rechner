@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<script>
+
+    function calc() {
+        let euro = eur.value.replace(",", ".");
+        let dollar = euro * 0.981;
+        usa.value = dollar.toString().replace(".", ",");
+    };
+
+</script>
+
+
+<body>
+    
+    <header>
+        Währungsrechner
+    </header>
+
+    <div style="margin-top: 100px;" class="currency">
+        <img src="/img/world.png">
+        <input id="eur" type="text" value="100">
+        <span>EUR</span>
+    </div>
+
+    <div class="convert-img">
+        <img src="/img/money.png">
+    </div>
+
+    <div class="currency">
+        <img src="/img/united-states-of-america.png" alt="">
+        <input id="usa" type="text" value="">
+        <span>USA</span>
+    </div>
+
+    <div class="button">
+        <button onclick="calc()">Berechnen</button>
+    </div>
+
+</body>
+
+</html>
